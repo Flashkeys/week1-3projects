@@ -1,0 +1,101 @@
+body {
+    background-color: black;
+    margin: 100px;
+    margin-top: 0px;
+}
+.inner-body {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f4;
+    /* margin: -8px; */
+}
+
+.profile-container {
+    flex: 1;
+    background-color: #003d73;
+    margin-right: 20px;
+    color: white;
+}
+
+.cv-container {
+    flex: 3;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.cv-container p {
+    /* bold text */
+    font-weight: bold;
+}
+.cvHeader {
+    list-style-type: none;
+    padding: 10px;
+    color: #4c769c;
+    font-size: 20px;
+}
+
+.profileHeader {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #002f59;
+    font-size: 20px;
+}
+
+.profile-links {
+    padding: 10px;
+}
+
+.profile-links li {
+    list-style-type: none;
+    color: #829fba;
+}
+
+.progressbar {
+    background-color: #002f59;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 13px;
+    padding: 3px;
+}
+
+.progressbar-95 {
+    background-color: #f4f4f4;
+    width: 95%;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.progressbar-85 {
+    background-color: #f4f4f4;
+    width: 85%;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.progressbar-90 {
+    background-color: #f4f4f4;
+    width: 90%;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.profile-image {
+    text-align: center;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 200px;
+    padding: 20px;
+}
+.card {
+    border: 1px solid #F0F8FF;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #DCDCDC;
+}

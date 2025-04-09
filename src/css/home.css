@@ -1,0 +1,20 @@
+.header {
+    background-color: gray;
+    text-align: center;
+    list-style-type: none;
+}
+
+a {
+    color: blue;
+    /* outline: none; 
+    border-bottom: none; */
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+h1, h2 {
+    text-align: center;
+}
