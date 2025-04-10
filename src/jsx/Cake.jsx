@@ -1,26 +1,22 @@
 import React from "react";
-import '../css/home.css';
+import "../css/cake.css";
 
-const Home = (count) => {
+const Cake = () => {
  
-    console.log(count);
 
     return (
       <div>
         <div>
-          <h1 className="h11">Home page</h1>
+          <h1>Cake</h1>
           <ul className="header">
             <li><a href="/">Home</a></li>
             <li><a href="/cv">Cv</a></li>
             <li><a href="/Chatt">Chatt</a></li>
           </ul>
-          <div className="test">
-          <p>test</p>
-          </div>
         </div>
       </div>
     );
 
 }
 
-export default Home;
+export default Cake;

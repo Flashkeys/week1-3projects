@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './jsx/Home.jsx'; 
 import Cv from './jsx/Cv.jsx';
+import Cake from './jsx/Cake.jsx';
 
 const Index = () => {
   const [count, setCount] = useState("testing count props");
@@ -12,6 +13,7 @@ const Index = () => {
       <Routes>
         <Route path="/" element={<Home count={count} />} />
         <Route path="/cv" element={<Cv/>} />
+        <Route path="/cake" element={<Cake/>} />
       </Routes>
     </BrowserRouter>
   )

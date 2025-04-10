@@ -1,18 +1,19 @@
-body {
+.background-body {
     background-color: black;
-    margin: 100px;
-    margin-top: 0px;
+    margin: -10px;
+    margin-top: -50px;
+    padding: 50px;
 }
 .inner-body {
     display: flex;
     justify-content: center;
     margin: 20px;
+    padding: 20px;
 }
 .container {
     display: flex;
     flex-direction: row;
     background-color: #f4f4f4;
-    /* margin: -8px; */
 }
 
 .profile-container {
@@ -28,7 +29,6 @@ body {
     background-color: #f4f4f4;
 }
 .cv-container p {
-    /* bold text */
     font-weight: bold;
 }
 .cvHeader {
