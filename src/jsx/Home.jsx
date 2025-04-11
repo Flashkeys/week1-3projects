@@ -6,17 +6,14 @@ const Home = (count) => {
     console.log(count);
 
     return (
-      <div>
-        <div>
-          <h1 className="h11">Home page</h1>
-          <ul className="header">
+      <div className="home-background-body">
+        <div className="home-container">
+          <h1>Home page</h1>
+          <ul className="home-header">
             <li><a href="/">Home</a></li>
             <li><a href="/cv">Cv</a></li>
-            <li><a href="/Chatt">Chatt</a></li>
+            <li><a href="/cake">Cake</a></li>
           </ul>
-          <div className="test">
-          <p>test</p>
-          </div>
         </div>
       </div>
     );

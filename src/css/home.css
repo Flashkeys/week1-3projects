@@ -1,26 +1,20 @@
-.h11 {
-    color: red;
-}
-.test {
-    border: 1px solid white;
-}
-.header {
+.home-header {
     background-color: gray;
     text-align: center;
     list-style-type: none;
 }
 
-a {
+.home-header a {
     color: blue;
     /* outline: none; 
     border-bottom: none; */
     text-decoration: none;
 }
 
-a:hover {
+.home-header a:hover {
     color: red;
 }
 
-h1, h2 {
+.home-container {
     text-align: center;
 }
