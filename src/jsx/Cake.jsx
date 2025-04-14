@@ -10,8 +10,27 @@ import snackBox1 from "../img/cake/snackbox1.jpg";
 import snackBox2 from "../img/cake/snackbox2.jpg";
 import snackBox3 from "../img/cake/snackbox3.jpg";
 import snackBox4 from "../img/cake/snackbox4.jpg";
+import { Link } from "react-router-dom";
+import cakes from "../json/cakes.json";
 
 const Cake = () => {
+
+  const images = {
+    chocolateCake,
+    vanillaCake,
+    lemonCake,
+    cheeseCake,
+    chockladeCookies,
+    rainbowCake,
+    snackBox1,
+    snackBox2,
+    snackBox3,
+    snackBox4,
+  };
+
+  function handleClick(cakeName) {
+    alert(`Added ${cakeName} to cart!`);
+  }
 
   return (
     <div className="cake-background-body">
@@ -28,69 +47,22 @@ const Cake = () => {
           </ul>
         </div>
         <div className="cake-cards">
-          <div className="cake-card">
-            <img src={chocolateCake} alt="Cake 1" />
-            <h2>Chocolate Cake</h2>
-            <p>Delicious chocolate cake with rich frosting.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={vanillaCake} alt="Cake 2" />
-            <h2>Vanilla Cake</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={lemonCake} alt="Cake 3" />
-            <h2>Lemon Cake</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={cheeseCake} alt="Cake 4" />
-            <h2>Cheese Cake</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={chockladeCookies} alt="Cake 5" />
-            <h2>Chocolate Cookies</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={rainbowCake} alt="Cake 6" />
-            <h2>Rainbow Cake</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={snackBox1} alt="Cake 7" />
-            <h2>Snack box 1</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={snackBox2} alt="Cake 8" />
-            <h2>Snack box 2</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={snackBox3} alt="Cake 9" />
-            <h2>Snack box 3</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="cake-card">
-            <img src={snackBox4} alt="Cake 10" />
-            <h2>Snack box 4</h2>
-            <p>Classic vanilla cake with creamy icing.</p>
-            <button>Add to Cart</button>
-          </div>
+          {cakes.map((cake) => (            
+            <div className="cake-card" key={cake.id}>
+              <Link to={`/cake/${cake.id}`} state={{ name: cake.name, description: cake.description, image: images[cake.id] }}>
+              <img src={images[cake.id]} alt={cake.name} />
+              </Link>
+              <h2>{cake.name}</h2>
+              <div className="cake-card-overlay">
+                <p>{cake.description}</p>
+                <button onClick={() => handleClick(cake.name)}>Add to Cart</button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
+
 export default Cake;

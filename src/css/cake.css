@@ -40,3 +40,10 @@
 .cake-container h1 {
     text-align: center;
 }
+.cake-card-overlay {
+    display: flex;
+    flex-direction: row;
+}
+.cake-card a{
+    text-decoration: none;
+}
