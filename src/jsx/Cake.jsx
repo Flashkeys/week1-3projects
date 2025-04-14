@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/cake.css";
 import cheeseCake from "../img/cake/cheesecake.jpg"
 import chocolateCake from "../img/cake/chockladecake.jpg";
@@ -12,8 +12,10 @@ import snackBox3 from "../img/cake/snackbox3.jpg";
 import snackBox4 from "../img/cake/snackbox4.jpg";
 import { Link } from "react-router-dom";
 import cakes from "../json/cakes.json";
+import CakeShopCart from "./CakeShopCart";
 
 const Cake = () => {
+  const [cart, setCart] = useState([]);
 
   const images = {
     chocolateCake,
@@ -28,8 +30,12 @@ const Cake = () => {
     snackBox4,
   };
 
-  function handleClick(cakeName) {
-    alert(`Added ${cakeName} to cart!`);
+  function handleClick(cakeId) {
+    const selectedCake = cakes.find((cake) => cake.id === cakeId);
+    if (selectedCake) {
+      setCart((prevCart) => [...prevCart, { ...selectedCake, image: images[cakeId] }]);
+      alert(`Added ${selectedCake.name} to cart!`);
+    }
   }
 
   return (
@@ -47,19 +53,20 @@ const Cake = () => {
           </ul>
         </div>
         <div className="cake-cards">
-          {cakes.map((cake) => (            
+          {cakes.map((cake) => (
             <div className="cake-card" key={cake.id}>
               <Link to={`/cake/${cake.id}`} state={{ name: cake.name, description: cake.description, image: images[cake.id] }}>
-              <img src={images[cake.id]} alt={cake.name} />
+                <img src={images[cake.id]} alt={cake.name} />
               </Link>
               <h2>{cake.name}</h2>
               <div className="cake-card-overlay">
                 <p>{cake.description}</p>
-                <button onClick={() => handleClick(cake.name)}>Add to Cart</button>
+                <button onClick={() => handleClick(cake.id)}>Add to Cart</button>
               </div>
             </div>
           ))}
         </div>
+        <CakeShopCart cart={cart} /> 
       </div>
     </div>
   );

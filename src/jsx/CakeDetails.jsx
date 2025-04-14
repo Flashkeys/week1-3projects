@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "../css//cakeDetails.css";
 
-
 const CakeDetails = () => {
     
     const location = useLocation();
