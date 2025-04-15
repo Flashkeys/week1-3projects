@@ -47,3 +47,9 @@
 .cake-card a{
     text-decoration: none;
 }
+.cake-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}

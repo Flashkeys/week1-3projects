@@ -3,60 +3,166 @@
       "id": "chocolateCake",
       "name": "Chocolate Cake",
       "description": "Delicious chocolate cake with rich frosting.",
-      "image": "../img/cake/chockladecake.jpg"
+      "image": "../img/cake/chockladecake.jpg",
+      "price": 20,
+      "category": "cake" 
     },
     {
       "id": "vanillaCake",
       "name": "Vanilla Cake",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/vanillacake.jpg"
+      "image": "../img/cake/vanillacake.jpg",
+      "price": 20,
+      "category": "cake" 
     },
     {
       "id": "lemonCake",
       "name": "Lemon Cake",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/lemoncake.jpg"
+      "image": "../img/cake/lemoncake.jpg",
+      "price": 20,
+      "category": "cake" 
     },
     {
       "id": "cheeseCake",
       "name": "Cheese Cake",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/cheesecake.jpg"
+      "image": "../img/cake/cheesecake.jpg",
+      "price": 20,
+      "category": "cake" 
     },
     {
       "id": "chockladeCookies",
       "name": "Chocolate Cookies",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/Chockladecookies.jpg"
+      "image": "../img/cake/Chockladecookies.jpg",
+      "price": 20,
+      "category": "cookies" 
     },
     {
       "id": "rainbowCake",
       "name": "Rainbow Cake",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/rainbowCookies.jpg"
+      "image": "../img/cake/rainbowCookies.jpg",
+      "price": 20,
+      "category": "cake" 
     },
     {
       "id": "snackBox1",
       "name": "Snack box 1",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/snackbox1.jpg"
+      "image": "../img/cake/snackbox1.jpg",
+      "price": 20,
+      "category": "snackbox" 
     },
     {
       "id": "snackBox2",
       "name": "Snack box 2",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/snackbox2.jpg"
+      "image": "../img/cake/snackbox2.jpg",
+      "price": 20,
+      "category": "snackbox" 
     },
     {
       "id": "snackBox3",
       "name": "Snack box 3",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/snackbox3.jpg"
+      "image": "../img/cake/snackbox3.jpg",
+      "price": 20,
+      "category": "snackbox" 
     },
     {
       "id": "snackBox4",
       "name": "Snack box 4",
       "description": "Classic vanilla cake with creamy icing.",
-      "image": "../img/cake/snackbox4.jpg"
+      "image": "../img/cake/snackbox4.jpg",
+      "price": 20,
+      "category": "snackbox" 
+    }
+    ,
+    {
+      "id": "snackBox5",
+      "name": "Snack box 5",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    }
+    ,
+    {
+      "id": "snackBox6",
+      "name": "Snack box 6",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    },
+    {
+      "id": "snackBox7",
+      "name": "Snack box 7",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    }
+    ,
+    {
+      "id": "snackBox8",
+      "name": "Snack box 8",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    }
+    ,
+    {
+      "id": "snackBox9",
+      "name": "Snack box 9",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    }
+    ,
+    {
+      "id": "snackBox10",
+      "name": "Snack box 10",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    }
+    ,
+    {
+      "id": "snackBox11",
+      "name": "Snack box 11",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    },
+    {
+      "id": "snackBox12",
+      "name": "Snack box 12",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    },
+    {
+      "id": "snackBox13",
+      "name": "Snack box 13",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
+    },
+    {
+      "id": "snackBox14",
+      "name": "Snack box 14",
+      "description": "Classic vanilla cake with creamy icing.",
+      "image": "",
+      "price": 20,
+      "category": "snackbox" 
     }
   ]
