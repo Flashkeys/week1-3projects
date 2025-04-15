@@ -13,6 +13,7 @@ import snackBox4 from "../img/cake/snackbox4.jpg";
 import { Link } from "react-router-dom";
 import cakes from "../json/cakes.json";
 import CakeShopCart from "./CakeShopCart";
+import CakeFooter from "./CakeFooter";
 
 const Cake = () => {
   const [cart, setCart] = useState([]);
@@ -63,8 +64,9 @@ const Cake = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="cake-search-button" onClick={() => setSearchQuery("cake")}>Clear Search</button>
-
+          <button className="cake-search-button" onClick={() => setSearchQuery("cake")}>Cakes</button>
+          <button className="cake-search-button" onClick={() => setSearchQuery("cookie")}>Cookies</button>
+          <button className="cake-search-button" onClick={() => setSearchQuery("snack box")}>Snackboxes</button>
         </div>
         <div className="cake-cards">
           {filteredCakes.map((cake) => (
@@ -75,20 +77,14 @@ const Cake = () => {
               <h2>{cake.name}</h2>
               <div className="cake-card-overlay">
                 <p>{cake.description}</p>
+                <p>{cake.price}Kr</p>
                 <button onClick={() => handleClick(cake.id)}>Add to Cart</button>
               </div>
             </div>
           ))}
         </div>
         <CakeShopCart cart={cart} />
-        <div className="cake-footer">
-          <p>&copy; 2023 Cake Shop. All rights reserved.</p>
-          <ul className="cake-footer-links">
-            <li><a href="/cake">Privacy Policy</a></li>
-            <li><a href="/cake">Terms of Service</a></li>
-            <li><a href="/cake">Contact Us</a></li>
-          </ul>
-        </div>
+          <CakeFooter />
       </div>
     </div>
   );

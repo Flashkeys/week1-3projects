@@ -2,6 +2,10 @@ import React from "react";
 import "../css/cakeShopCart.css";
 
 const CakeShopCart = ({ cart }) => {
+  let totalPrice = 0;
+  cart.forEach((cake) => {
+    totalPrice += cake.price;
+  });
   return (
     <div className="cake-shop-cart">
       <h1>Shopping Cart</h1>
@@ -17,6 +21,7 @@ const CakeShopCart = ({ cart }) => {
               </li>
             </div>
           ))}
+          <li>Total price: {totalPrice}</li>
         </ul>
       )}
     </div>
