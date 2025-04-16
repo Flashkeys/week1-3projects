@@ -10,14 +10,15 @@ import snackBox1 from "../img/cake/snackbox1.jpg";
 import snackBox2 from "../img/cake/snackbox2.jpg";
 import snackBox3 from "../img/cake/snackbox3.jpg";
 import snackBox4 from "../img/cake/snackbox4.jpg";
+import shoppingCart from "../img/cake/shoppingCart.jpg";
 import { Link } from "react-router-dom";
 import cakes from "../json/cakes.json";
 import CakeShopCart from "./CakeShopCart";
-import CakeFooter from "./CakeFooter";
 
 const Cake = () => {
-  const [cart, setCart] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [cart, setCart] = useState([]); // State for the shopping cart
+  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
+  const [isCartVisible, setIsCartVisible] = useState(false); // State to toggle cart visibility
 
   const images = {
     chocolateCake,
@@ -30,6 +31,7 @@ const Cake = () => {
     snackBox2,
     snackBox3,
     snackBox4,
+    shoppingCart,
   };
 
   function handleClick(cakeId) {
@@ -39,9 +41,13 @@ const Cake = () => {
     }
   }
 
+  // Filter cakes based on the search query
   const filteredCakes = cakes.filter((cake) =>
     cake.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // Calculate total price of items in the cart
+  const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
     <div className="cake-background-body">
@@ -56,17 +62,22 @@ const Cake = () => {
             <li><a href="/cake">Login</a></li>
             <li><a href="/cake">My account</a></li>
           </ul>
+          {/* Shopping Cart Icon */}
+          <img
+            src={images.shoppingCart} // Replace with your shopping cart icon path
+            alt="Shopping Cart"
+            className="shopping-cart-icon"
+            onClick={() => setIsCartVisible(!isCartVisible)} // Toggle cart visibility
+          />
         </div>
         <div className="cake-search-container">
-          <input type="text"
+          <input
+            type="text"
             placeholder="Search for cakes..."
             className="cake-search"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => setSearchQuery(e.target.value)} // Update search query on input change
           />
-          <button className="cake-search-button" onClick={() => setSearchQuery("cake")}>Cakes</button>
-          <button className="cake-search-button" onClick={() => setSearchQuery("cookie")}>Cookies</button>
-          <button className="cake-search-button" onClick={() => setSearchQuery("snack box")}>Snackboxes</button>
         </div>
         <div className="cake-cards">
           {filteredCakes.map((cake) => (
@@ -83,8 +94,12 @@ const Cake = () => {
             </div>
           ))}
         </div>
-        <CakeShopCart cart={cart} />
-          <CakeFooter />
+        {/* Shopping Cart Popup */}
+        {isCartVisible && (
+          <div className="shopping-cart-popup">
+            <CakeShopCart cart={cart} totalPrice={totalPrice} />
+          </div>
+        )}
       </div>
     </div>
   );
