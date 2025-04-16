@@ -14,6 +14,7 @@ import shoppingCart from "../img/cake/shoppingCart.jpg";
 import { Link } from "react-router-dom";
 import cakes from "../json/cakes.json";
 import CakeShopCart from "./CakeShopCart";
+import CakeFooter from "./CakeFooter";
 
 const Cake = () => {
   const [cart, setCart] = useState([]); // State for the shopping cart
@@ -37,8 +38,30 @@ const Cake = () => {
   function handleClick(cakeId) {
     const selectedCake = cakes.find((cake) => cake.id === cakeId);
     if (selectedCake) {
-      setCart((prevCart) => [...prevCart, { ...selectedCake, image: images[cakeId] }]);
+      setCart((prevCart) => {
+        const existingItem = prevCart.find((item) => item.id === cakeId);
+        if (existingItem) {
+          // If the item already exists, increment its quantity
+          return prevCart.map((item) =>
+            item.id === cakeId ? { ...item, quantity: item.quantity + 1 } : item
+          );
+        } else {
+          // If the item doesn't exist, add it with a quantity of 1
+          return [...prevCart, { ...selectedCake, image: images[cakeId], quantity: 1 }];
+        }
+      });
     }
+  }
+  function removeFromCart(cakeId) {
+    setCart((prevCart) => {
+      return prevCart
+        .map((item) =>
+          item.id === cakeId
+            ? { ...item, quantity: item.quantity - 1 } // Decrement quantity
+            : item
+        )
+        .filter((item) => item.quantity > 0); // Remove items with quantity 0
+    });
   }
 
   // Filter cakes based on the search query
@@ -47,7 +70,7 @@ const Cake = () => {
   );
 
   // Calculate total price of items in the cart
-  const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
     <div className="cake-background-body">
@@ -97,9 +120,10 @@ const Cake = () => {
         {/* Shopping Cart Popup */}
         {isCartVisible && (
           <div className="shopping-cart-popup">
-            <CakeShopCart cart={cart} totalPrice={totalPrice} />
+            <CakeShopCart cart={cart} totalPrice={totalPrice} closeCart={() => setIsCartVisible(false)} removeFromCart={removeFromCart} />
           </div>
         )}
+        <CakeFooter />
       </div>
     </div>
   );
