@@ -80,10 +80,10 @@ const Cake = () => {
           <ul className="cake-header-links">
             <li><a href="/cake">Cake Home</a></li>
             <li><a href="/cake">Shop List</a></li>
-            <li><a href="/cake">About us</a></li>
-            <li><a href="/cake">Register</a></li>
+            <li><a href="/cakeAboutUs">About us</a></li>
+            <li><a href="/cakeCreateUser">Register</a></li>
             <li><a href="/cake">Login</a></li>
-            <li><a href="/cake">My account</a></li>
+            <li><a href="/cakeOrder">My Order</a></li>
           </ul>
           <img src={images.shoppingCart} alt="Shopping Cart" className="shopping-cart-icon" onClick={() => setIsCartVisible(!isCartVisible)} />
         </div>

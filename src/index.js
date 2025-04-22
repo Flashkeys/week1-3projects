@@ -6,6 +6,9 @@ import Cv from './jsx/Cv.jsx';
 import Cake from './jsx/Cake.jsx';
 import CakeDetails from './jsx/CakeDetails.jsx';
 import NotFound from './jsx/NotFound.jsx';
+import CakeAboutUs from './jsx/CakeAboutUs.jsx';
+import CakeOrder from './jsx/CakeOrder.jsx';
+import CakeCreateUser from './jsx/CakeCreateUser.jsx';
 
 const Index = () => {
   const [count, setCount] = useState("testing count props");
@@ -17,6 +20,9 @@ const Index = () => {
         <Route path="/cv" element={<Cv/>} />
         <Route path="/cake" element={<Cake/>} />
         <Route path="/cake/:cakeId" element={<CakeDetails />} />
+        <Route path="/cakeAboutUs" element={<CakeAboutUs/>} />
+        <Route path="/cakeOrder" element={<CakeOrder/>} />
+        <Route path="/cakeCreateUser" element={<CakeCreateUser/>} />
         <Route path="/*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
