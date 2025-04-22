@@ -11,15 +11,15 @@ import snackBox2 from "../img/cake/snackbox2.jpg";
 import snackBox3 from "../img/cake/snackbox3.jpg";
 import snackBox4 from "../img/cake/snackbox4.jpg";
 import shoppingCart from "../img/cake/shoppingCart.jpg";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import cakes from "../json/cakes.json";
 import CakeShopCart from "./CakeShopCart";
 import CakeFooter from "./CakeFooter";
 
 const Cake = () => {
-  const [cart, setCart] = useState([]); // State for the shopping cart
-  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
-  const [isCartVisible, setIsCartVisible] = useState(false); // State to toggle cart visibility
+  const [cart, setCart] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isCartVisible, setIsCartVisible] = useState(false);
 
   const images = {
     chocolateCake,
@@ -85,22 +85,10 @@ const Cake = () => {
             <li><a href="/cake">Login</a></li>
             <li><a href="/cake">My account</a></li>
           </ul>
-          {/* Shopping Cart Icon */}
-          <img
-            src={images.shoppingCart} // Replace with your shopping cart icon path
-            alt="Shopping Cart"
-            className="shopping-cart-icon"
-            onClick={() => setIsCartVisible(!isCartVisible)} // Toggle cart visibility
-          />
+          <img src={images.shoppingCart} alt="Shopping Cart" className="shopping-cart-icon" onClick={() => setIsCartVisible(!isCartVisible)} />
         </div>
         <div className="cake-search-container">
-          <input
-            type="text"
-            placeholder="Search for cakes..."
-            className="cake-search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)} // Update search query on input change
-          />
+          <input type="text" placeholder="Search for cakes..." className="cake-search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         </div>
         <div className="cake-cards">
           {filteredCakes.map((cake) => (
