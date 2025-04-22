@@ -6,20 +6,17 @@ const CakeCreateUser = () => {
 
   const handleCreateUser = () => {
     if (username && password) {
-      // Retrieve existing users from localStorage or initialize an empty object
       const users = JSON.parse(localStorage.getItem("users")) || {};
 
       if (users[username]) {
         alert("Username already exists. Please choose a different username.");
         return;
       }
-
       // Add the new user to the users object
       users[username] = { username, password, isLoggedIn: false };
-
       // Save the updated users object back to localStorage
       localStorage.setItem("users", JSON.stringify(users));
-
+    
       alert("User created successfully!");
       setUsername("");
       setPassword("");
@@ -30,11 +27,9 @@ const CakeCreateUser = () => {
 
   const handleLogin = () => {
     if (username && password) {
-      // Retrieve existing users from localStorage
       const users = JSON.parse(localStorage.getItem("users")) || {};
 
       if (users[username] && users[username].password === password) {
-        // Set isLoggedIn to true for the correct user
         users[username].isLoggedIn = true;
 
         // Save the updated users object back to localStorage
@@ -52,14 +47,11 @@ const CakeCreateUser = () => {
   };
 
   const handleLogout = () => {
-    // Retrieve existing users from localStorage
     const users = JSON.parse(localStorage.getItem("users")) || {};
 
-    // Find the logged-in user
     const loggedInUser = Object.values(users).find((user) => user.isLoggedIn);
 
     if (loggedInUser) {
-      // Set isLoggedIn to false for the logged-in user
       users[loggedInUser.username].isLoggedIn = false;
 
       // Save the updated users object back to localStorage
@@ -71,8 +63,6 @@ const CakeCreateUser = () => {
     }
   }
   //localStorage.removeItem("user");
-  //localStorage.removeItem("cartDetails");
-  //localStorage.removeItem("totalPrice");
   return (
     <div>
       <div>
