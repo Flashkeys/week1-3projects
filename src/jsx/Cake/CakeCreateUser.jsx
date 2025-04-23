@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CakeHeaderLinks from "./CakeHeaderLinks";
 
 const CakeCreateUser = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const users = JSON.parse(localStorage.getItem("users")) || {};
+    const loggedInUser = Object.values(users).find((user) => user.isLoggedIn);
+    setIsLoggedIn(!!loggedInUser); // Set isLoggedIn to true if a user is logged in
+  }, []);
 
   const handleCreateUser = () => {
     if (username && password) {
@@ -17,7 +24,7 @@ const CakeCreateUser = () => {
       users[username] = { username, password, isLoggedIn: false };
       // Save the updated users object back to localStorage
       localStorage.setItem("users", JSON.stringify(users));
-    
+
       alert("User created successfully!");
       setUsername("");
       setPassword("");
@@ -37,6 +44,7 @@ const CakeCreateUser = () => {
         localStorage.setItem("users", JSON.stringify(users));
 
         alert(`Welcome, ${username}! You are now logged in.`);
+        setIsLoggedIn(true); // Update isLoggedIn state
         setUsername("");
         setPassword("");
       } else {
@@ -59,11 +67,12 @@ const CakeCreateUser = () => {
       localStorage.setItem("users", JSON.stringify(users));
 
       alert(`Goodbye, ${loggedInUser.username}! You are now logged out.`);
+      setIsLoggedIn(false); // Update isLoggedIn state
     } else {
       alert("No user is currently logged in.");
     }
-  }
-  //localStorage.removeItem("user");
+  };
+
   return (
     <div>
       <CakeHeaderLinks />
@@ -99,8 +108,12 @@ const CakeCreateUser = () => {
         />
         <button onClick={handleLogin}>Login</button>
       </div>
-      <h1>Logout</h1>
-      <button onClick={handleLogout}>Logout</button>
+      {isLoggedIn && (
+        <div>
+          <h1>Logout</h1>
+          <button onClick={handleLogout}>Logout</button>
+        </div>
+      )}
     </div>
   );
 };
