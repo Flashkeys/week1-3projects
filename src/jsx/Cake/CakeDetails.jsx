@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import "../css/cakeDetails.css";
+import "../../css/Cake/cakeDetails.css";
 
 const CakeDetails = () => {
     

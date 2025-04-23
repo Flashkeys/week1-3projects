@@ -1,20 +1,21 @@
 import React, { useState } from "react";
-import "../css/cake.css";
-import cheeseCake from "../img/cake/cheesecake.jpg";
-import chocolateCake from "../img/cake/chockladecake.jpg";
-import vanillaCake from "../img/cake/vanillacake.jpg";
-import lemonCake from "../img/cake/lemoncake.jpg";
-import chockladeCookies from "../img/cake/Chockladecookies.jpg";
-import rainbowCake from "../img/cake/rainbowCookies.jpg";
-import snackBox1 from "../img/cake/snackbox1.jpg";
-import snackBox2 from "../img/cake/snackbox2.jpg";
-import snackBox3 from "../img/cake/snackbox3.jpg";
-import snackBox4 from "../img/cake/snackbox4.jpg";
-import shoppingCart from "../img/cake/shoppingCart.jpg";
 import { Link } from "react-router";
-import cakes from "../json/cakes.json";
+import "../../css/Cake/cake.css";
+import cheeseCake from "../../img/cake/cheesecake.jpg";
+import chocolateCake from "../../img/cake/chockladecake.jpg";
+import vanillaCake from "../../img/cake/vanillacake.jpg";
+import lemonCake from "../../img/cake/lemoncake.jpg";
+import chockladeCookies from "../../img/cake/Chockladecookies.jpg";
+import rainbowCake from "../../img/cake/rainbowCookies.jpg";
+import snackBox1 from "../../img/cake/snackbox1.jpg";
+import snackBox2 from "../../img/cake/snackbox2.jpg";
+import snackBox3 from "../../img/cake/snackbox3.jpg";
+import snackBox4 from "../../img/cake/snackbox4.jpg";
+import shoppingCart from "../../img/cake/shoppingCart.jpg";
+import cakes from "../../json/cakes.json";
 import CakeShopCart from "./CakeShopCart";
 import CakeFooter from "./CakeFooter";
+import CakeHeaderLinks from "./CakeHeaderLinks";
 
 const Cake = () => {
   const [cart, setCart] = useState([]);
@@ -77,14 +78,7 @@ const Cake = () => {
       <div className="cake-container">
         <div className="cake-header">
           <h1>Cake Store</h1>
-          <ul className="cake-header-links">
-            <li><a href="/cake">Cake Home</a></li>
-            <li><a href="/cake">Shop List</a></li>
-            <li><a href="/cakeAboutUs">About us</a></li>
-            <li><a href="/cakeCreateUser">Register</a></li>
-            <li><a href="/cake">Login</a></li>
-            <li><a href="/cakeOrder">My Order</a></li>
-          </ul>
+          <CakeHeaderLinks />
           <img src={images.shoppingCart} alt="Shopping Cart" className="shopping-cart-icon" onClick={() => setIsCartVisible(!isCartVisible)} />
         </div>
         <div className="cake-search-container">

@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from './jsx/Home.jsx'; 
 import Cv from './jsx/Cv.jsx';
-import Cake from './jsx/Cake.jsx';
-import CakeDetails from './jsx/CakeDetails.jsx';
+import Cake from './jsx/Cake/Cake.jsx';
+import CakeDetails from './jsx/Cake/CakeDetails.jsx';
 import NotFound from './jsx/NotFound.jsx';
-import CakeAboutUs from './jsx/CakeAboutUs.jsx';
-import CakeOrder from './jsx/CakeOrder.jsx';
-import CakeCreateUser from './jsx/CakeCreateUser.jsx';
+import CakeAboutUs from './jsx/Cake/CakeAboutUs.jsx';
+import CakeOrder from './jsx/Cake/CakeOrder.jsx';
+import CakeCreateUser from './jsx/Cake/CakeCreateUser.jsx';
 
 const Index = () => {
   const [count, setCount] = useState("testing count props");

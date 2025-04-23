@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/cakeFooter.css";
+import "../../css/Cake/cakeFooter.css";
 
 const CakeFooter = () => {
   return (

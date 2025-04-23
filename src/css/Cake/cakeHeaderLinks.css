@@ -1,0 +1,19 @@
+.cake-header-links-container li {
+    list-style-type: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.cake-header-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cake-header-links a {
+    text-decoration: none;
+}
+
+.cake-header-links a:hover {
+    color: red;
+}

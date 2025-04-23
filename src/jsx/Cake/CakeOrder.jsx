@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../css/cakeOrder.css';
+import '../../css/Cake/cakeOrder.css';
 
 const CakeOrder = () => {
   const [cartDetails, setCartDetails] = useState([]);

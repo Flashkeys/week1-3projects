@@ -1,6 +1,6 @@
 import React from "react";
-import "../css/cakeShopCart.css";
-import xIcon from "../img/cake/x.png";
+import '../../css/Cake/cakeShopCart.css';
+import xIcon from "../../img/cake/x.png";
 import { useNavigate } from "react-router-dom";
 
 const CakeShopCart = ({ cart, totalPrice, closeCart, removeFromCart }) => {
