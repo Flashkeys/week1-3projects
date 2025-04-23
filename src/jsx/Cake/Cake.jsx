@@ -82,7 +82,6 @@ const Cake = () => {
     <div className="cake-background-body">
       <div className="cake-container">
         <div className="cake-header">
-          <h1>Cake Store</h1>
           <CakeHeaderLinks />
           <img src={images.shoppingCart} alt="Shopping Cart" className="shopping-cart-icon" onClick={() => setIsCartVisible(!isCartVisible)} />
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import '../../css/Cake/cakeOrder.css';
+import CakeHeaderLinks from "./CakeHeaderLinks";
 
 const CakeOrder = () => {
   const [cartDetails, setCartDetails] = useState([]);
@@ -22,6 +23,7 @@ const CakeOrder = () => {
 
   return (
     <div>
+      <CakeHeaderLinks />
       {loggedInUser ? (
         <div>
           <h1>Your Order</h1>

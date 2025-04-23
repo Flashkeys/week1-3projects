@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CakeHeaderLinks from "./CakeHeaderLinks";
 
 const CakeCreateUser = () => {
   const [username, setUsername] = useState("");
@@ -65,6 +66,7 @@ const CakeCreateUser = () => {
   //localStorage.removeItem("user");
   return (
     <div>
+      <CakeHeaderLinks />
       <div>
         <h1>Create User</h1>
         <input
