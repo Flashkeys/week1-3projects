@@ -1,7 +1,13 @@
+.cake-order-body {
+    margin: -8px;
+    margin-top: 20px;
+}
+
 .cake-order-list-card img {
     width: 200px;
     height: 200px;
 }
+
 .cake-order-list-card {
     border: 1px solid black;
 }

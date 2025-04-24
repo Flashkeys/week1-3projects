@@ -4,8 +4,7 @@ import CakeHeaderLinks from "./CakeHeaderLinks";
 import CakeFooter from "./CakeFooter";
 
 const CakeOrder = () => {
-  const [cartDetails, setCartDetails] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [orders, setOrders] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState(null);
 
   useEffect(() => {
@@ -13,67 +12,47 @@ const CakeOrder = () => {
 
     // Find the logged-in user
     const user = Object.values(users).find((user) => user.isLoggedIn);
-    console.log(user);
 
     if (user) {
       setLoggedInUser(user.username);
-      setCartDetails(user.cartDetails || []);
-      setTotalPrice(user.totalPrice || 0);
+      setOrders(user.orders || []); // Load all orders for the logged-in user
     }
   }, []);
 
-  const handleRemoveOrder = () => {
-    const users = JSON.parse(localStorage.getItem("users")) || {};
-
-    // Find the logged-in user
-    const user = Object.values(users).find((user) => user.isLoggedIn);
-
-    if (user) {
-      // Clear the cart details and total price for the logged-in user
-      users[user.username].cartDetails = [];
-      users[user.username].totalPrice = 0;
-
-      // Update localStorage
-      localStorage.setItem("users", JSON.stringify(users));
-
-      // Clear the state
-      setCartDetails([]);
-      setTotalPrice(0);
-
-      alert("Your order has been removed.");
-    } else {
-      alert("No logged-in user found.");
-    }
-  };
-
   return (
-    <div>
+    <div className="cake-order-body">
       <CakeHeaderLinks />
       {loggedInUser ? (
         <div>
-          <h1>Your Order</h1>
-          {cartDetails.length === 0 ? (
-            <p>No products in your order.</p>
+          <h1>Your Orders</h1>
+          {orders.length === 0 ? (
+            <p>No orders found.</p>
           ) : (
-            <div className="cake-order-list-cards">
-              {cartDetails.map((cake, index) => (
-                <div className="cake-order-list-card" key={index}>
-                  <h2>{cake.name} {cake.quantity > 1 && `x${cake.quantity}`}</h2>
-                  <img src={cake.image} alt={cake.name} />
-                  <p>{cake.price * cake.quantity} Kr</p>
+            <div className="cake-order-list">
+              {orders.map((order, index) => (
+                <div key={index} className="cake-order-item">
+                  <h2>Order #{index + 1}</h2>
+                  <p>Date: {order.date}</p>
+                  <ul>
+                    {order.cartDetails.map((cake, i) => (
+                      <div className="cake-order-list-card" key={index}>
+                        <h3>
+                          {cake.name} {cake.quantity > 1 && `x${cake.quantity}`}
+                        </h3>
+                        <img src={cake.image} alt={cake.name} /> {/* Ensure image is displayed */}
+                        <p>{cake.price * cake.quantity} Kr</p>
+                      </div>
+                    ))}
+                  </ul>
+                  <h3>Total Price: {order.totalPrice} Kr</h3>
                 </div>
               ))}
             </div>
           )}
-          <h2>Total Price: {totalPrice} Kr</h2>
-          {/* Show remove button if you have an order*/}
-          {cartDetails.length > 0 && (
-            <button onClick={handleRemoveOrder}>Remove order</button>
-          )}
         </div>
       ) : (
         <div>
-          <h1>Please log in to view your order.</h1>
+          <h1>Please log in to view your orders.</h1>
         </div>
       )}
       <CakeFooter />

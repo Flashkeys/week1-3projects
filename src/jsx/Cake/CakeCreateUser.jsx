@@ -4,8 +4,11 @@ import CakeFooter from "./CakeFooter";
 import '../../css/Cake/cakeCreateUser.css';
 
 const CakeCreateUser = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  // Separate state for "Create User" and "Login"
+  const [registerUsername, setRegisterUsername] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -15,40 +18,40 @@ const CakeCreateUser = () => {
   }, []);
 
   const handleCreateUser = () => {
-    if (username && password) {
+    if (registerUsername && registerPassword) {
       const users = JSON.parse(localStorage.getItem("users")) || {};
 
-      if (users[username]) {
+      if (users[registerUsername]) {
         alert("Username already exists. Please choose a different username.");
         return;
       }
       // Add the new user to the users object
-      users[username] = { username, password, isLoggedIn: false };
+      users[registerUsername] = { username: registerUsername, password: registerPassword, isLoggedIn: false };
       // Save the updated users object back to localStorage
       localStorage.setItem("users", JSON.stringify(users));
 
       alert("User created successfully!");
-      setUsername("");
-      setPassword("");
+      setRegisterUsername("");
+      setRegisterPassword("");
     } else {
       alert("Please fill in all fields.");
     }
   };
 
   const handleLogin = () => {
-    if (username && password) {
+    if (loginUsername && loginPassword) {
       const users = JSON.parse(localStorage.getItem("users")) || {};
 
-      if (users[username] && users[username].password === password) {
-        users[username].isLoggedIn = true;
+      if (users[loginUsername] && users[loginUsername].password === loginPassword) {
+        users[loginUsername].isLoggedIn = true;
 
         // Save the updated users object back to localStorage
         localStorage.setItem("users", JSON.stringify(users));
 
-        alert(`Welcome, ${username}! You are now logged in.`);
+        alert(`Welcome, ${loginUsername}! You are now logged in.`);
         setIsLoggedIn(true); // Update isLoggedIn state
-        setUsername("");
-        setPassword("");
+        setLoginUsername("");
+        setLoginPassword("");
       } else {
         alert("Invalid username or password. Please try again.");
       }
@@ -84,14 +87,14 @@ const CakeCreateUser = () => {
           <input
             type="text"
             placeholder="Enter username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={registerUsername}
+            onChange={(e) => setRegisterUsername(e.target.value)}
           />
           <input
             type="password"
             placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={registerPassword}
+            onChange={(e) => setRegisterPassword(e.target.value)}
           />
           <button onClick={handleCreateUser}>Create Account</button>
         </div>
@@ -100,14 +103,14 @@ const CakeCreateUser = () => {
           <input
             type="text"
             placeholder="Enter username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={loginUsername}
+            onChange={(e) => setLoginUsername(e.target.value)}
           />
           <input
             type="password"
             placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={loginPassword}
+            onChange={(e) => setLoginPassword(e.target.value)}
           />
           <button onClick={handleLogin}>Login</button>
         </div>

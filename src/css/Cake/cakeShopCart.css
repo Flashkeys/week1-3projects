@@ -9,3 +9,24 @@
     border-bottom: 1px solid #ccc;
     margin: 5px 0;
 }
+.cake-shop-cart-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cake-shop-cart-container li {
+    margin-bottom: 10px;
+}
+
+.cake-shop-cart-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.cake-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}

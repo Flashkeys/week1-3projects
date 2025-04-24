@@ -4,6 +4,8 @@ import CakeFooter from "./CakeFooter";
 import '../../css/Cake/cakeAboutUs.css'
 
 const CakeAboutUs = () => {
+  
+  //localStorage.removeItem("users");
   return (
     <div className="cake-about-us-body">
       <CakeHeaderLinks />

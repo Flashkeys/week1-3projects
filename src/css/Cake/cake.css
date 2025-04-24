@@ -3,6 +3,10 @@
     margin-top: 20px;
 }
 
+.welcome-cake {
+    width: 100%;
+}
+
 .cake-cards {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +16,8 @@
 }
 
 .cake-card {
-    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
     flex-grow: 1;
     max-width: 300px;
     margin: 20px;
@@ -33,7 +38,11 @@
 
 .cake-card-overlay-container h2 {
     text-align: center;
-    margin: 10px 0;
+    margin: 10px;
+}
+
+.cake-card-overlay-container p {
+    margin: 10px;
 }
 
 .cake-card-footer {
@@ -75,21 +84,6 @@
     z-index: 1000;
 }
 
-.cake-shop-cart ul {
-    list-style: none;
-    padding: 0;
-}
-
-.cake-shop-cart li {
-    margin-bottom: 10px;
-}
-
-.cake-shop-cart img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
-
 .shopping-cart-popup {
     position: fixed;
     top: 50px;
@@ -120,10 +114,6 @@
 .shopping-cart-popup::-webkit-scrollbar-thumb:hover {
     background-color: #555;
     /* Color when hovered */
-}
-
-.welcome-cake {
-    width: 100%;
 }
 
 /*
