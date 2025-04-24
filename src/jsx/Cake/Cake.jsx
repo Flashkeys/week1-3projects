@@ -28,6 +28,7 @@ import cakes from "../../json/cakes.json";
 import CakeShopCart from "./CakeShopCart";
 import CakeFooter from "./CakeFooter";
 import CakeHeaderLinks from "./CakeHeaderLinks";
+import welcomeCake from '../../img/cake/welcomeCake.png';
 
 const Cake = () => {
   const [cart, setCart] = useState([]);
@@ -85,6 +86,7 @@ const Cake = () => {
           <CakeHeaderLinks />
           <img src={images.shoppingCart} alt="Shopping Cart" className="shopping-cart-icon" onClick={() => setIsCartVisible(!isCartVisible)} />
         </div>
+        <img src={welcomeCake} alt="Welcome Cake" className="welcome-cake" />
         <div className="cake-search-container">
           <input type="text" placeholder="Search for cakes..." className="cake-search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         </div>

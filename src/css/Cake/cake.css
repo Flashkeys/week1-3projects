@@ -1,3 +1,8 @@
+.cake-background-body {
+    margin: -8px;
+    margin-top: 20px;
+}
+
 .cake-cards {
     display: flex;
     flex-wrap: wrap;
@@ -116,3 +121,14 @@
     background-color: #555;
     /* Color when hovered */
 }
+
+.welcome-cake {
+    width: 100%;
+}
+
+/*
+.cake-card-overlay-container {
+    position: relative;
+    overflow: hidden;
+}
+    */
