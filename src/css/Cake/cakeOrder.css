@@ -1,4 +1,7 @@
-.cake-order-list img {
+.cake-order-list-card img {
     width: 200px;
     height: 200px;
+}
+.cake-order-list-card {
+    border: 1px solid black;
 }

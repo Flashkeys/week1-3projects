@@ -1,0 +1,11 @@
+.cake-create-user-body {
+    margin: -8px;
+    margin-top: 20px;
+}
+.cake-create-user-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /*height: 100vh;*/
+}

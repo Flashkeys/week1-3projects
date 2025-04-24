@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CakeHeaderLinks from "./CakeHeaderLinks";
 import CakeFooter from "./CakeFooter";
+import '../../css/Cake/cakeCreateUser.css';
 
 const CakeCreateUser = () => {
   const [username, setUsername] = useState("");
@@ -75,46 +76,49 @@ const CakeCreateUser = () => {
   };
 
   return (
-    <div>
+    <div className="cake-create-user-body">
       <CakeHeaderLinks />
-      <div>
-        <h1>Create User</h1>
-        <input
-          type="text"
-          placeholder="Enter username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Enter password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={handleCreateUser}>Create Account</button>
-      </div>
-      <div>
-        <h1>Login</h1>
-        <input
-          type="text"
-          placeholder="Enter username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Enter password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={handleLogin}>Login</button>
-      </div>
-      {isLoggedIn && (
+      <div className="cake-create-user-container">
         <div>
-          <h1>Logout</h1>
-          <button onClick={handleLogout}>Logout</button>
+          <h1>Create User</h1>
+          <input
+            type="text"
+            placeholder="Enter username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button onClick={handleCreateUser}>Create Account</button>
         </div>
-      )}
+        <div>
+          <h1>Login</h1>
+          <input
+            type="text"
+            placeholder="Enter username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button onClick={handleLogin}>Login</button>
+        </div>
+
+        {isLoggedIn && (
+          <div>
+            <h1>Logout</h1>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        )}
+      </div>
       <CakeFooter />
     </div>
   );
