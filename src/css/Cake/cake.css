@@ -22,13 +22,24 @@
     text-align: center;
 }
 
-.cake-card-overlay {
-    display: flex;
-    flex-direction: row;
-}
-
 .cake-card a {
     text-decoration: none;
+}
+
+.cake-card-overlay-container h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.cake-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cake-card-footer p {
+    margin: 0;
+    margin-left: 10px;
 }
 
 .cake-search-container {

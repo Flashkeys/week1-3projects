@@ -1,5 +1,6 @@
 import React from "react";
 import CakeHeaderLinks from "./CakeHeaderLinks";
+import CakeFooter from "./CakeFooter";
 
 const CakeAboutUs = () => {
   return (
@@ -11,6 +12,7 @@ const CakeAboutUs = () => {
         <p>Whether you're celebrating a birthday, wedding, or any special event, we have the perfect cake for you. From classic flavors to unique designs, we strive to exceed your expectations and make your celebration unforgettable.</p>
         <p>Thank you for choosing us for your cake needs!</p>
         </div>
+        <CakeFooter />
     </div>
   );
 };

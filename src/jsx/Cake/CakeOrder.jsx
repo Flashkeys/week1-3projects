@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import '../../css/Cake/cakeOrder.css';
 import CakeHeaderLinks from "./CakeHeaderLinks";
+import CakeFooter from "./CakeFooter";
 
 const CakeOrder = () => {
   const [cartDetails, setCartDetails] = useState([]);
@@ -51,6 +52,7 @@ const CakeOrder = () => {
           <h1>Please log in to view your order.</h1>
         </div>
       )}
+      <CakeFooter />
     </div>
   );
 };

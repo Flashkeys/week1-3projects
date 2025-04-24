@@ -94,16 +94,17 @@ const Cake = () => {
               <Link to={`/cake/${cake.id}`} state={{ name: cake.name, description: cake.description, image: images[cake.id] }}>
                 <img src={images[cake.id]} alt={cake.name} />
               </Link>
-              <h2>{cake.name}</h2>
-              <div className="cake-card-overlay">
+              <div className="cake-card-overlay-container">
+                <h2>{cake.name}</h2>
                 <p>{cake.description}</p>
-                <p>{cake.price}Kr</p>
-                <button onClick={() => handleClick(cake.id)}>Add to Cart</button>
+                <div className="cake-card-footer">
+                  <p>{cake.price}Kr</p>
+                  <button onClick={() => handleClick(cake.id)}>Add to Cart</button>
+                </div>
               </div>
             </div>
           ))}
         </div>
-        {/* Shopping Cart Popup */}
         {isCartVisible && (
           <div className="shopping-cart-popup">
             <CakeShopCart cart={cart} totalPrice={totalPrice} closeCart={() => setIsCartVisible(false)} removeFromCart={removeFromCart} />

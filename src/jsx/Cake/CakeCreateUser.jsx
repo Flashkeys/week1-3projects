@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CakeHeaderLinks from "./CakeHeaderLinks";
+import CakeFooter from "./CakeFooter";
 
 const CakeCreateUser = () => {
   const [username, setUsername] = useState("");
@@ -114,6 +115,7 @@ const CakeCreateUser = () => {
           <button onClick={handleLogout}>Logout</button>
         </div>
       )}
+      <CakeFooter />
     </div>
   );
 };
