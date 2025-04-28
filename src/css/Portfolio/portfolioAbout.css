@@ -1,0 +1,147 @@
+.portfolio-about-body {
+    background-color: red;
+    margin: -8px;
+    /*
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    /*
+    display: flex; /* Use flexbox to align child elements */
+}
+
+.portfolio-about-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f4;
+}
+
+.portfolio-about-links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: #2E2C2F;
+    color: white;
+    height: 100%;
+    min-height: 100vh;
+    /* Stretch to the full height of the viewport */
+}
+
+.portfolio-about-content-container {
+    flex: 4;
+    background-color: #f4f4f4;
+}
+
+.portfolio-about-links-title {
+    text-align: center;
+}
+
+.portfolio-about-links-links {
+    margin: 30px;
+}
+
+.portfolio-about-links-links ul {
+    list-style-type: none;
+}
+
+.portfolio-about-links-links a {
+    margin: 10px 0;
+    font-size: 70px;
+    color: #729B79;
+    text-decoration: none;
+}
+
+.portfolio-about-links-links a:hover {
+    color: #BACDB0;
+    border-bottom: 3px solid #BACDB0;
+}
+
+
+.portfolio-about-content-container {
+    background-color: #475B63;
+    color: #F3E8EE;
+}
+
+
+
+
+
+
+.portfolio-about-links-footer {
+    text-align: center;
+    /* Center the footer text */
+    margin-top: 20px;
+    /* Optional: Add spacing above the footer */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio-about-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.portfolio-about-content-right-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.portfolio-about-content-left-container{
+    margin-top: 200px;
+}
+.portfolio-about-content-left-container-title {
+    text-align: center;
+}
+.portfolio-about-content-right-top {
+   margin: 10px;
+}
+.portfolio-about-content-right-top ul{
+    list-style-type: none;
+    font-size: 20px;
+}
+.portfolio-about-content-right-contact {
+    display: flex;
+    justify-content: center;
+}
+.portfolio-about-content-right-top-space {
+    margin-right: 30px;
+}
+.portfolio-about-content-right-mid-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2px;
+}
+.portfolio-about-content-right-mid-mid {
+    display: flex;
+    flex-direction: row;
+}
+.portfolio-about-content-right-mid-mid-left {
+    margin: 20px;
+    padding: 10px;
+}
+
+.portfolio-about-content-right-bot {
+    background-color: #2E2C2F;
+    text-align: center;
+    padding: 20px;
+}

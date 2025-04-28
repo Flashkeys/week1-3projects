@@ -13,6 +13,7 @@ const Home = (count) => {
             <li><a href="/">Home</a></li>
             <li><a href="/cv">Cv</a></li>
             <li><a href="/cake">Cake</a></li>
+            <li><a href="/portfolioHome">Portfolio Home</a></li>
           </ul>
         </div>
       </div>

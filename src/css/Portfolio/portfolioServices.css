@@ -1,0 +1,117 @@
+.portfolio-services-body {
+    background-color: red;
+    margin: -8px;
+    /*
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    /*
+    display: flex; /* Use flexbox to align child elements */
+}
+
+.portfolio-services-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f4;
+}
+
+.portfolio-services-links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: #2E2C2F;
+    color: white;
+    height: 100%;
+    min-height: 100vh;
+    /* Stretch to the full height of the viewport */
+}
+
+.portfolio-services-content-container {
+    flex: 4;
+    background-color: #f4f4f4;
+}
+
+.portfolio-services-content-pic {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-services-links-title {
+    text-align: center;
+}
+
+.portfolio-services-links-links {
+    margin: 30px;
+}
+
+.portfolio-services-links-links ul {
+    list-style-type: none;
+}
+
+.portfolio-services-links-links a {
+    margin: 10px 0;
+    font-size: 70px;
+    color: #729B79;
+    text-decoration: none;
+}
+
+.portfolio-services-links-links a:hover {
+    color: #BACDB0;
+    border-bottom: 3px solid #BACDB0;
+}
+
+
+.portfolio-services-content-container {
+    background-color: #475B63;
+    color: #F3E8EE;
+}
+
+
+
+
+
+
+.portfolio-services-links-footer {
+    text-align: center;
+    /* Center the footer text */
+    margin-top: 20px;
+    /* Optional: Add spacing above the footer */
+}
+
+
+
+
+
+
+
+
+.portfolio-services-content-card-container {
+    margin: 100px;
+}
+.portfolio-services-content-card {
+    border-bottom: 2px solid #BACDB0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.portfolio-services-large {
+    font-size: 50px;
+    color: #BACDB0;
+    margin: 20px;
+    padding: 20px;
+}
+.portfolio-services-medium {
+    font-size: 30px;
+    color: #BACDB0;
+    padding: 20px;
+}
+.portfolio-services-content-card p{
+    font-size: 16px;
+    color: #F3E8EE;
+    margin: 20px;
+    padding: 40px;
+}
+
+
