@@ -88,6 +88,7 @@ const Cake = () => {
         </div>
         <img src={welcomeCake} alt="Welcome Cake" className="welcome-cake" />
         <div className="cake-search-container">
+          <h2>Search for a cake!</h2>
           <input type="text" placeholder="Search for cakes..." className="cake-search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         </div>
         <div className="cake-cards">
@@ -100,7 +101,7 @@ const Cake = () => {
                 <h2>{cake.name}</h2>
                 <p>{cake.description}</p>
                 <div className="cake-card-footer">
-                  <p>{cake.price}Kr</p>
+                  <p>{cake.price} Kr</p>
                   <button onClick={() => handleClick(cake.id)}>Add to Cart</button>
                 </div>
               </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CakeHeaderLinks from "./CakeHeaderLinks";
 import CakeFooter from "./CakeFooter";
 import '../../css/Cake/cakeCreateUser.css';
+import CakeSideBar from '../../img/cake/cakeSideBar.png';
 
 const CakeCreateUser = () => {
   // Separate state for "Create User" and "Login"
@@ -81,46 +82,54 @@ const CakeCreateUser = () => {
   return (
     <div className="cake-create-user-body">
       <CakeHeaderLinks />
-      <div className="cake-create-user-container">
+      <div className="cake-create-user-flex-container">
         <div>
-          <h1>Create User</h1>
-          <input
-            type="text"
-            placeholder="Enter username"
-            value={registerUsername}
-            onChange={(e) => setRegisterUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Enter password"
-            value={registerPassword}
-            onChange={(e) => setRegisterPassword(e.target.value)}
-          />
-          <button onClick={handleCreateUser}>Create Account</button>
+          <img src={CakeSideBar} alt="cakeSideBar" className="cake-side-bar" />
         </div>
-        <div>
-          <h1>Login</h1>
-          <input
-            type="text"
-            placeholder="Enter username"
-            value={loginUsername}
-            onChange={(e) => setLoginUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Enter password"
-            value={loginPassword}
-            onChange={(e) => setLoginPassword(e.target.value)}
-          />
-          <button onClick={handleLogin}>Login</button>
-        </div>
-
-        {isLoggedIn && (
+        <div className="cake-create-user-container">
           <div>
-            <h1>Logout</h1>
-            <button onClick={handleLogout}>Logout</button>
+            <h1>Create User</h1>
+            <input
+              type="text"
+              placeholder="Enter username"
+              value={registerUsername}
+              onChange={(e) => setRegisterUsername(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Enter password"
+              value={registerPassword}
+              onChange={(e) => setRegisterPassword(e.target.value)}
+            />
+            <button onClick={handleCreateUser}>Create Account</button>
           </div>
-        )}
+          <div>
+            <h1>Login</h1>
+            <input
+              type="text"
+              placeholder="Enter username"
+              value={loginUsername}
+              onChange={(e) => setLoginUsername(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Enter password"
+              value={loginPassword}
+              onChange={(e) => setLoginPassword(e.target.value)}
+            />
+            <button onClick={handleLogin}>Login</button>
+          </div>
+
+          {isLoggedIn && (
+            <div>
+              <h1>Logout</h1>
+              <button onClick={handleLogout}>Logout</button>
+            </div>
+          )}
+        </div>
+        <div>
+          <img src={CakeSideBar} alt="cakeSideBar" className="cake-side-bar" />
+        </div>
       </div>
       <CakeFooter />
     </div>

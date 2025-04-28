@@ -2,3 +2,38 @@
     margin: -8px;
     margin-top: 20px;
 }
+.cake-about-us-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+.cake-about-us-content {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.cake-open-hours-list ul {
+    list-style-type: none;
+}
+.cake-open-hours-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /*
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    */
+}
+.cake-about-us-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cake-location-list ul{
+    list-style-type: none;
+}
