@@ -40,6 +40,7 @@ const Index = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Index />);
 
-/*
-yes exactly, presentation day is Week-18 (2025-04-30)
-*/
+
+//yes exactly, presentation day is Week-18 (2025-04-30)
+
+// readme

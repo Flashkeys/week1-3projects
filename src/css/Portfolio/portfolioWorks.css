@@ -1,0 +1,120 @@
+.portfolio-works-body {
+    background-color: red;
+    margin: -8px;
+    /*
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    /*
+    display: flex; /* Use flexbox to align child elements */
+}
+
+.portfolio-works-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f4;
+}
+
+.portfolio-works-links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: #2E2C2F;
+    color: white;
+    height: 100%;
+    min-height: 100vh;
+    /* Stretch to the full height of the viewport */
+}
+
+.portfolio-works-content-container {
+    flex: 4;
+    background-color: #f4f4f4;
+}
+
+.portfolio-works-content-pic {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-works-links-title {
+    text-align: center;
+}
+
+.portfolio-works-links-links {
+    margin: 30px;
+}
+
+.portfolio-works-links-links ul {
+    list-style-type: none;
+}
+
+.portfolio-works-links-links a {
+    margin: 10px 0;
+    font-size: 70px;
+    color: #729B79;
+    text-decoration: none;
+}
+
+.portfolio-works-links-links a:hover {
+    color: #BACDB0;
+    border-bottom: 3px solid #BACDB0;
+}
+
+
+.portfolio-works-content-container {
+    background-color: #475B63;
+    color: #F3E8EE;
+}
+
+
+
+
+
+
+.portfolio-works-links-footer {
+    text-align: center;
+    /* Center the footer text */
+    margin-top: 20px;
+    /* Optional: Add spacing above the footer */
+}
+
+
+
+
+
+
+.portfolio-works-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.portfolio-works-project {
+    max-width: 350px;
+    max-height: 350px;
+    width: 350px;
+    height: 300px;
+}
+
+.portfolio-works-projects {
+    display: flex;
+    flex-direction: row;
+}
+.portfolio-works-projects-card {
+    margin: 20px;
+}
+.portfolio-works-projects-card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.portfolio-works-projects-card-title p{
+    margin-top: 25px;
+}
+

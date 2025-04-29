@@ -1,18 +1,30 @@
+.home-background-body {
+    background-color: #2E2C2F ;
+    margin: -8px;
+    min-height: 100vh;
+}
 .home-header {
-    background-color: gray;
     text-align: center;
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.home-links {
+    font-size: 100px;
+    margin: 20px;
 }
 
 .home-header a {
-    color: blue;
+    color: #729B79;
     /* outline: none; 
     border-bottom: none; */
     text-decoration: none;
 }
 
 .home-header a:hover {
-    color: red;
+    color: #BACDB0;
+    border-bottom: 3px solid #BACDB0;
 }
 
 .home-container {

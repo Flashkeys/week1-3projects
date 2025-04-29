@@ -8,12 +8,11 @@ const Home = (count) => {
     return (
       <div className="home-background-body">
         <div className="home-container">
-          <h1>Home page</h1>
           <ul className="home-header">
-            <li><a href="/">Home</a></li>
-            <li><a href="/cv">Cv</a></li>
-            <li><a href="/cake">Cake</a></li>
-            <li><a href="/portfolioHome">Portfolio Home</a></li>
+            <li className="home-links"><a href="/">Home</a></li>
+            <li className="home-links"><a href="/cv">Cv</a></li>
+            <li className="home-links"><a href="/cake">Cake</a></li>
+            <li className="home-links"><a href="/portfolioHome">Portfolio Home</a></li>
           </ul>
         </div>
       </div>
