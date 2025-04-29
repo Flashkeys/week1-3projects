@@ -22,16 +22,20 @@ const Index = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/cv" element={<Cv/>} />
+
         <Route path="/cake" element={<Cake/>} />
+        {/* add subpage for each cake so you can view additional info */}
         <Route path="/cake/:cakeId" element={<CakeDetails />} />
         <Route path="/cakeAboutUs" element={<CakeAboutUs/>} />
         <Route path="/cakeOrder" element={<CakeOrder/>} />
         <Route path="/cakeCreateUser" element={<CakeCreateUser/>} />
+
         <Route path="/portfolioHome" element={<PortfolioHome/>} />
         <Route path="/portfolioAbout" element={<PortfolioAbout/>} />
         <Route path="/portfolioServices" element={<PortfolioServices/>} />
         <Route path="/portfolioWorks" element={<PortfolioWorks/>} />
         <Route path="/portfolioContact" element={<PortfolioContact/>} />
+
         <Route path="/*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
@@ -40,7 +44,8 @@ const Index = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Index />);
 
-
-//yes exactly, presentation day is Week-18 (2025-04-30)
-
 // readme
+
+// responsiv
+
+// publish

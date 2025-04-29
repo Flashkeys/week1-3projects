@@ -89,34 +89,14 @@ const CakeCreateUser = () => {
         <div className="cake-create-user-container">
           <div>
             <h1>Create User</h1>
-            <input
-              type="text"
-              placeholder="Enter username"
-              value={registerUsername}
-              onChange={(e) => setRegisterUsername(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Enter password"
-              value={registerPassword}
-              onChange={(e) => setRegisterPassword(e.target.value)}
-            />
+            <input type="text" placeholder="Enter username" value={registerUsername} onChange={(e) => setRegisterUsername(e.target.value)}/>
+            <input type="password" placeholder="Enter password" value={registerPassword} onChange={(e) => setRegisterPassword(e.target.value)}/>
             <button onClick={handleCreateUser}>Create Account</button>
           </div>
           <div>
             <h1>Login</h1>
-            <input
-              type="text"
-              placeholder="Enter username"
-              value={loginUsername}
-              onChange={(e) => setLoginUsername(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Enter password"
-              value={loginPassword}
-              onChange={(e) => setLoginPassword(e.target.value)}
-            />
+            <input type="text" placeholder="Enter username" value={loginUsername} onChange={(e) => setLoginUsername(e.target.value)}/>
+            <input type="password" placeholder="Enter password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)}/>
             <button onClick={handleLogin}>Login</button>
           </div>
 

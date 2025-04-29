@@ -1,4 +1,22 @@
-.cake-details img {
+.cake-details-body {
+    margin: -8px;
+    margin-top: 20px;
+}
+
+.cake-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cake-details-content img {
     width: 500px;
     height: 500px;
+}
+
+.cake-details-content {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }

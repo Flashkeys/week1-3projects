@@ -1,5 +1,7 @@
 import React from "react";
 import '../../css/Portfolio/portfolioContact.css';
+import instagramIcon from '../../img/instagram.png';
+import facebookIcon from '../../img/facebook.png';
 
 const PortfolioContact = () => {
 
@@ -20,7 +22,8 @@ const PortfolioContact = () => {
             </ul>
           </div>
           <div className="portfolio-contact-links-socials">
-            <img src="https://via.placeholder.com/150" alt="Logo" className="portfolio-home-logo" />
+            <a href="https://www.google.com/search?client=opera-gx&q=facebook&sourceid=opera&ie=UTF-8&oe=UTF-8"><img src={instagramIcon} alt="Logo" className="portfolio-about-logo" /></a>
+            <a href="https://www.google.com/search?client=opera-gx&q=facebook&sourceid=opera&ie=UTF-8&oe=UTF-8"><img src={facebookIcon} alt="Logo" className="portfolio-about-logo" /></a>
           </div>
           <div className="portfolio-contact-links-footer">
             <p>copyright @whatever</p>
@@ -28,14 +31,18 @@ const PortfolioContact = () => {
         </div>
         <div className="portfolio-contact-content-container">
           <div className="portfolio-contact-content-card-container">
-            <div className="portfolio-contact-content-card-">
+            <div className="portfolio-contact-content-card-left">
               <h1 className="portfolio-contact-large">Contact Me</h1>
+              <p>+073-456 78 90</p>
+              <p>jhon_doe@gmail.com</p>
             </div>
             <div className="portfolio-contact-content-card">
               <div className="portfolio-contact-content-card-form">
-                <h2>Any Project</h2>
-                <input type="text" placeholder="Name" className="portfolio-contact-input" />
-                <input type="email" placeholder="Email" className="portfolio-contact-input" />
+                <h2>Any Project ?</h2>
+                <div className="portfolio-contact-content-card-form-inputs">
+                  <input type="text" placeholder="Name" className="portfolio-contact-input" />
+                  <input type="email" placeholder="Email" className="portfolio-contact-input" />
+                </div>
                 <input type="text" placeholder="Message" className="portfolio-contact-input" />
               </div>
             </div>

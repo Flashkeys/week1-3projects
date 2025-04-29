@@ -7,7 +7,7 @@ import chocolateCake from "../../img/cake/chockladecake.jpg";
 import vanillaCake from "../../img/cake/vanillacake.jpg";
 import lemonCake from "../../img/cake/lemoncake.jpg";
 import chockladeCookies from "../../img/cake/Chockladecookies.jpg";
-import rainbowCake from "../../img/cake/rainbowCookies.jpg";
+import rainbowCake from "../../img/cake/rainbowCake.jpg";
 import snackBox1 from "../../img/cake/snackbox1.jpg";
 import snackBox2 from "../../img/cake/snackbox2.jpg";
 import snackBox3 from "../../img/cake/snackbox3.jpg";
@@ -48,7 +48,7 @@ const Cake = () => {
       setCart((prevCart) => {
         const existingItem = prevCart.find((item) => item.id === cakeId);
         if (existingItem) {
-          // If the item already exists, increment its quantity
+          // If the item already exists in the cart, increment its quantity
           return prevCart.map((item) =>
             item.id === cakeId ? { ...item, quantity: item.quantity + 1 } : item
           );
@@ -92,11 +92,16 @@ const Cake = () => {
           <input type="text" placeholder="Search for cakes..." className="cake-search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         </div>
         <div className="cake-cards">
+
+          {/* Render all cakes from Json */}
           {filteredCakes.map((cake) => (
             <div className="cake-card" key={cake.id}>
+
+              {/* Add a link to sub page for each cake and send info for that cake */}
               <Link to={`/cake/${cake.id}`} state={{ name: cake.name, description: cake.description, image: images[cake.id] }}>
                 <img src={images[cake.id]} alt={cake.name} />
               </Link>
+
               <div className="cake-card-overlay-container">
                 <h2>{cake.name}</h2>
                 <p>{cake.description}</p>
@@ -107,6 +112,7 @@ const Cake = () => {
               </div>
             </div>
           ))}
+
         </div>
         {isCartVisible && (
           <div className="shopping-cart-popup">

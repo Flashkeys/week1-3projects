@@ -1,6 +1,8 @@
 import React from "react";
 import '../../css/Portfolio/portfolioHome.css';
 import profileIcon from '../../img/profilepic.png';
+import instagramIcon from '../../img/instagram.png';
+import facebookIcon from '../../img/facebook.png';
 
 const PortfolioHome = () => {
 
@@ -21,7 +23,8 @@ const PortfolioHome = () => {
             </ul>
           </div>
           <div className="portfolio-home-links-socials">
-            <img src="https://via.placeholder.com/150" alt="Logo" className="portfolio-home-logo" />
+            <a href="https://www.google.com/search?client=opera-gx&q=facebook&sourceid=opera&ie=UTF-8&oe=UTF-8"><img src={instagramIcon} alt="Logo" className="portfolio-about-logo" /></a>
+            <a href="https://www.google.com/search?client=opera-gx&q=facebook&sourceid=opera&ie=UTF-8&oe=UTF-8"><img src={facebookIcon} alt="Logo" className="portfolio-about-logo" /></a>
           </div>
           <div className="portfolio-home-links-footer">
             <p>copyright @whatever</p>

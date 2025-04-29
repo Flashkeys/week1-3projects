@@ -15,7 +15,6 @@ const CakeHeaderLinks = () => {
       // Update the users object in localStorage
       localStorage.setItem("users", JSON.stringify(users));
 
-      // Reload the page to reflect the changes
       window.location.reload();
     }
   };

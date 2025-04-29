@@ -108,6 +108,7 @@
 }
 .portfolio-works-projects-card {
     margin: 20px;
+    max-width: 350px;
 }
 .portfolio-works-projects-card-title {
     display: flex;
@@ -115,6 +116,6 @@
     justify-content: space-between;
 }
 .portfolio-works-projects-card-title p{
-    margin-top: 25px;
+    margin-top: 30px;
 }
 

@@ -28,7 +28,7 @@ const CakeShopCart = ({ cart, totalPrice, closeCart, removeFromCart }) => {
         ...cake, // Ensure all properties, including `image`, are included
       })),
       totalPrice: totalPrice,
-      date: new Date().toLocaleString(), // Add the current date and time
+      date: new Date().toLocaleString(),
     };
   
     // Initialize the orders array if it doesn't exist

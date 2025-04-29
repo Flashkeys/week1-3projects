@@ -36,7 +36,7 @@
     "name": "Rainbow Cake",
     "description": "Classic vanilla cake with creamy icing.",
     "image": "../img/cake/rainbowCookies.jpg",
-    "price": 40,
+    "price": 140,
     "category": "cake"
   },
   {
